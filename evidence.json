@@ -1,0 +1,132 @@
+{
+  "schema": "frantic.runx.dep-upgrade-plan.delivery.v1",
+  "bounty": 53,
+  "posting_id": "p-bed1634fbd",
+  "claim_id": "frantic:claim:94191856-17f5-4664-9e5c-d3e272cb7fd2",
+  "package": {
+    "skill_id": "ryde-play/dep-upgrade-plan",
+    "owner": "ryde-play",
+    "name": "dep-upgrade-plan",
+    "version": "sha-7a1f34b0",
+    "source_commit": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
+    "digest": "953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+    "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+    "trust_tier": "community"
+  },
+  "urls": {
+    "public_url": "https://runx.ai/x/ryde-play/dep-upgrade-plan",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan",
+    "pr_url": "https://github.com/runxhq/runx/pull/126",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/SKILL.md",
+    "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json",
+    "evidence_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/evidence.json",
+    "report": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/report.md",
+    "receipt_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json",
+    "dogfood_run_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-skill-run.json",
+    "runx_verify_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-verify.json",
+    "registry_read_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/registry-read.json",
+    "install_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/install.json"
+  },
+  "receipt_ref": "runx:receipt:sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+  "generated_at": "2026-06-23T05:29:52.256Z",
+  "summary": "Published runx registry skill dep-upgrade-plan with PR source, hosted harness coverage, registry read/install checks, and a post-publish dogfood receipt that passes runx verify in production signature mode.",
+  "implementation": {
+    "skill_md": "skills/dep-upgrade-plan/SKILL.md",
+    "x_yaml": "skills/dep-upgrade-plan/X.yaml",
+    "runner": "skills/dep-upgrade-plan/run.mjs",
+    "fixtures": [
+      "fixtures/package-lock.json",
+      "fixtures/advisories.json",
+      "fixtures/constraints.json",
+      "fixtures/blocking-constraints.json"
+    ],
+    "behavior": [
+      "reads npm package-lock, advisory facts, and constraints",
+      "emits dep.upgrade.plan.v1 with ranked plan entries including pkg/from/to/risk/breaking",
+      "records changelog and refused candidates",
+      "refuses when all upgrades are blocked by constraints",
+      "does not install packages or mutate project files"
+    ]
+  },
+  "checks": {
+    "runx_version": "runx-cli 0.6.13",
+    "inspect": {
+      "status": "ok",
+      "name": "dep-upgrade-plan"
+    },
+    "harness": {
+      "status": "passed",
+      "case_count": 2
+    },
+    "registry_read": {
+      "status": "success",
+      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "source": "remote"
+    },
+    "install": {
+      "status": "installed",
+      "destination_suffix": "ryde-play/dep-upgrade-plan/sha-7a1f34b0/SKILL.md"
+    },
+    "dogfood": {
+      "status": "sealed",
+      "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+      "plan_length": 2,
+      "refused_length": 1,
+      "exit_code": 0
+    },
+    "verify": {
+      "valid": true,
+      "signature_status": "valid",
+      "signature_mode": "production",
+      "digest_status": "valid",
+      "content_address_status": "valid",
+      "lineage_status": "unverified"
+    }
+  },
+  "dogfood_output": {
+    "schema": "dep.upgrade.plan.v1",
+    "summary": {
+      "advisory_records": 3,
+      "dependencies_in_lockfile": 3,
+      "planned_upgrades": 2,
+      "refused_candidates": 1
+    },
+    "plan": [
+      {
+        "advisory": "GHSA-35jh-r3h4-6jhm",
+        "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
+        "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
+        "constraint_note": "Patch-only update allowed in the current release train.",
+        "from": "4.17.19",
+        "pkg": "lodash",
+        "risk": "high",
+        "severity": "high",
+        "to": "4.17.21"
+      },
+      {
+        "advisory": "GHSA-qw6h-vgh9-j6wx",
+        "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
+        "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
+        "constraint_note": "Stay on Express 4 until the next application framework migration.",
+        "from": "4.16.4",
+        "pkg": "express",
+        "risk": "low",
+        "severity": "low",
+        "to": "4.20.0"
+      }
+    ],
+    "refused_candidates": [
+      {
+        "from": "2.6.8",
+        "package": "debug",
+        "reason": "target 4.3.1 is explicitly blocked",
+        "to": "4.3.1"
+      }
+    ],
+    "changelog": [
+      "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
+      "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+    ]
+  }
+}

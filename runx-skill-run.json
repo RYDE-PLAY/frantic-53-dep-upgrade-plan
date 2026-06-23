@@ -1,0 +1,389 @@
+{
+  "closure": {
+    "closed_at": "2026-06-23T05:27:55.230Z",
+    "disposition": "closed",
+    "reason_code": "process_closed",
+    "summary": "cli-tool default completed"
+  },
+  "execution": {
+    "exit_code": 0,
+    "skill_claim": {
+      "dependency_upgrade_plan": {
+        "artifacts": {},
+        "changelog": [
+          "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
+          "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+        ],
+        "ok": true,
+        "plan": [
+          {
+            "advisory": "GHSA-35jh-r3h4-6jhm",
+            "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
+            "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
+            "constraint_note": "Patch-only update allowed in the current release train.",
+            "from": "4.17.19",
+            "pkg": "lodash",
+            "risk": "high",
+            "severity": "high",
+            "to": "4.17.21"
+          },
+          {
+            "advisory": "GHSA-qw6h-vgh9-j6wx",
+            "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
+            "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
+            "constraint_note": "Stay on Express 4 until the next application framework migration.",
+            "from": "4.16.4",
+            "pkg": "express",
+            "risk": "low",
+            "severity": "low",
+            "to": "4.20.0"
+          }
+        ],
+        "refused": false,
+        "refused_candidates": [
+          {
+            "from": "2.6.8",
+            "package": "debug",
+            "reason": "target 4.3.1 is explicitly blocked",
+            "to": "4.3.1"
+          }
+        ],
+        "scanner": {
+          "name": "dep-upgrade-plan",
+          "policy": "read-only release planning",
+          "version": "0.1.0"
+        },
+        "schema": "dep.upgrade.plan.v1",
+        "source": {
+          "bytes": 536,
+          "kind": "inline-json",
+          "ref": "lockfile_json",
+          "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+        },
+        "summary": {
+          "advisory_records": 3,
+          "dependencies_in_lockfile": 3,
+          "planned_upgrades": 2,
+          "refused_candidates": 1
+        },
+        "target": {
+          "name": "frantic53-fixture",
+          "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
+          "repo": "https://github.com/RYDE-PLAY/runx"
+        },
+        "validation": {
+          "constraints_enforced": true,
+          "every_entry_has_breaking_note": true,
+          "every_entry_has_exact_from_to": true,
+          "packages_installed": false,
+          "target_code_executed": false
+        }
+      },
+      "evidence_json": null,
+      "report_md": null
+    },
+    "stderr": "",
+    "stdout": "{\n  \"dependency_upgrade_plan\": {\n    \"schema\": \"dep.upgrade.plan.v1\",\n    \"ok\": true,\n    \"refused\": false,\n    \"target\": {\n      \"name\": \"frantic53-fixture\",\n      \"repo\": \"https://github.com/RYDE-PLAY/runx\",\n      \"ref\": \"7a1f34b0c878988a46a4fadb493f9079a08a042e\"\n    },\n    \"source\": {\n      \"kind\": \"inline-json\",\n      \"ref\": \"lockfile_json\",\n      \"bytes\": 536,\n      \"sha256\": \"bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d\"\n    },\n    \"scanner\": {\n      \"name\": \"dep-upgrade-plan\",\n      \"version\": \"0.1.0\",\n      \"policy\": \"read-only release planning\"\n    },\n    \"summary\": {\n      \"dependencies_in_lockfile\": 3,\n      \"advisory_records\": 3,\n      \"planned_upgrades\": 2,\n      \"refused_candidates\": 1\n    },\n    \"plan\": [\n      {\n        \"pkg\": \"lodash\",\n        \"from\": \"4.17.19\",\n        \"to\": \"4.17.21\",\n        \"risk\": \"high\",\n        \"breaking\": \"Patch-level update; no breaking change indicated by supplied notes.\",\n        \"advisory\": \"GHSA-35jh-r3h4-6jhm\",\n        \"advisory_source\": \"https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm\",\n        \"severity\": \"high\",\n        \"constraint_note\": \"Patch-only update allowed in the current release train.\"\n      },\n      {\n        \"pkg\": \"express\",\n        \"from\": \"4.16.4\",\n        \"to\": \"4.20.0\",\n        \"risk\": \"low\",\n        \"breaking\": \"Stays on Express 4.x; review response.redirect behavior and middleware compatibility.\",\n        \"advisory\": \"GHSA-qw6h-vgh9-j6wx\",\n        \"advisory_source\": \"https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx\",\n        \"severity\": \"low\",\n        \"constraint_note\": \"Stay on Express 4 until the next application framework migration.\"\n      }\n    ],\n    \"changelog\": [\n      \"lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.\",\n      \"express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility.\"\n    ],\n    \"refused_candidates\": [\n      {\n        \"package\": \"debug\",\n        \"from\": \"2.6.8\",\n        \"to\": \"4.3.1\",\n        \"reason\": \"target 4.3.1 is explicitly blocked\"\n      }\n    ],\n    \"validation\": {\n      \"every_entry_has_exact_from_to\": true,\n      \"every_entry_has_breaking_note\": true,\n      \"constraints_enforced\": true,\n      \"target_code_executed\": false,\n      \"packages_installed\": false\n    },\n    \"artifacts\": {}\n  },\n  \"evidence_json\": null,\n  \"report_md\": null\n}\n",
+    "structured_output": {
+      "dependency_upgrade_plan": {
+        "artifacts": {},
+        "changelog": [
+          "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
+          "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+        ],
+        "ok": true,
+        "plan": [
+          {
+            "advisory": "GHSA-35jh-r3h4-6jhm",
+            "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
+            "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
+            "constraint_note": "Patch-only update allowed in the current release train.",
+            "from": "4.17.19",
+            "pkg": "lodash",
+            "risk": "high",
+            "severity": "high",
+            "to": "4.17.21"
+          },
+          {
+            "advisory": "GHSA-qw6h-vgh9-j6wx",
+            "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
+            "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
+            "constraint_note": "Stay on Express 4 until the next application framework migration.",
+            "from": "4.16.4",
+            "pkg": "express",
+            "risk": "low",
+            "severity": "low",
+            "to": "4.20.0"
+          }
+        ],
+        "refused": false,
+        "refused_candidates": [
+          {
+            "from": "2.6.8",
+            "package": "debug",
+            "reason": "target 4.3.1 is explicitly blocked",
+            "to": "4.3.1"
+          }
+        ],
+        "scanner": {
+          "name": "dep-upgrade-plan",
+          "policy": "read-only release planning",
+          "version": "0.1.0"
+        },
+        "schema": "dep.upgrade.plan.v1",
+        "source": {
+          "bytes": 536,
+          "kind": "inline-json",
+          "ref": "lockfile_json",
+          "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+        },
+        "summary": {
+          "advisory_records": 3,
+          "dependencies_in_lockfile": 3,
+          "planned_upgrades": 2,
+          "refused_candidates": 1
+        },
+        "target": {
+          "name": "frantic53-fixture",
+          "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
+          "repo": "https://github.com/RYDE-PLAY/runx"
+        },
+        "validation": {
+          "constraints_enforced": true,
+          "every_entry_has_breaking_note": true,
+          "every_entry_has_exact_from_to": true,
+          "packages_installed": false,
+          "target_code_executed": false
+        }
+      },
+      "evidence_json": null,
+      "report_md": null
+    }
+  },
+  "payload": {
+    "dependency_upgrade_plan": {
+      "artifacts": {},
+      "changelog": [
+        "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
+        "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+      ],
+      "ok": true,
+      "plan": [
+        {
+          "advisory": "GHSA-35jh-r3h4-6jhm",
+          "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
+          "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
+          "constraint_note": "Patch-only update allowed in the current release train.",
+          "from": "4.17.19",
+          "pkg": "lodash",
+          "risk": "high",
+          "severity": "high",
+          "to": "4.17.21"
+        },
+        {
+          "advisory": "GHSA-qw6h-vgh9-j6wx",
+          "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
+          "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
+          "constraint_note": "Stay on Express 4 until the next application framework migration.",
+          "from": "4.16.4",
+          "pkg": "express",
+          "risk": "low",
+          "severity": "low",
+          "to": "4.20.0"
+        }
+      ],
+      "refused": false,
+      "refused_candidates": [
+        {
+          "from": "2.6.8",
+          "package": "debug",
+          "reason": "target 4.3.1 is explicitly blocked",
+          "to": "4.3.1"
+        }
+      ],
+      "scanner": {
+        "name": "dep-upgrade-plan",
+        "policy": "read-only release planning",
+        "version": "0.1.0"
+      },
+      "schema": "dep.upgrade.plan.v1",
+      "source": {
+        "bytes": 536,
+        "kind": "inline-json",
+        "ref": "lockfile_json",
+        "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+      },
+      "summary": {
+        "advisory_records": 3,
+        "dependencies_in_lockfile": 3,
+        "planned_upgrades": 2,
+        "refused_candidates": 1
+      },
+      "target": {
+        "name": "frantic53-fixture",
+        "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
+        "repo": "https://github.com/RYDE-PLAY/runx"
+      },
+      "validation": {
+        "constraints_enforced": true,
+        "every_entry_has_breaking_note": true,
+        "every_entry_has_exact_from_to": true,
+        "packages_installed": false,
+        "target_code_executed": false
+      }
+    },
+    "evidence_json": null,
+    "report_md": null
+  },
+  "receipt": {
+    "acts": [
+      {
+        "artifact_refs": [],
+        "closure": {
+          "closed_at": "2026-06-23T05:27:55.230Z",
+          "disposition": "closed",
+          "reason_code": "process_exit",
+          "summary": "cli-tool exited successfully"
+        },
+        "criterion_bindings": [
+          {
+            "criterion_id": "process_exit",
+            "evidence_refs": [],
+            "status": "verified",
+            "summary": "cli-tool exited successfully",
+            "verification_refs": []
+          }
+        ],
+        "form": "observation",
+        "id": "act_default",
+        "intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Runtime graph execution was admitted by the local harness",
+          "purpose": "Run graph step default",
+          "success_criteria": [
+            {
+              "criterion_id": "process_exit",
+              "required": true,
+              "statement": "cli-tool exits successfully"
+            }
+          ]
+        },
+        "source_refs": [],
+        "summary": "Executed graph step default",
+        "target_refs": []
+      }
+    ],
+    "authority": {
+      "actor_ref": {
+        "type": "principal",
+        "uri": "runx:principal:local_runtime"
+      },
+      "attenuation": {
+        "parent_authority_ref": null,
+        "subset_proof": null
+      },
+      "authority_proof_refs": [],
+      "enforcement": {
+        "profile_hash": "sha256:runtime-skeleton-enforcement",
+        "redaction_refs": [],
+        "setup_refs": [],
+        "teardown_refs": []
+      },
+      "grant_refs": [],
+      "scope_refs": [],
+      "terms": []
+    },
+    "canonicalization": "runx.receipt.c14n.v1",
+    "created_at": "2026-06-23T05:27:55.230Z",
+    "decisions": [
+      {
+        "artifact_refs": [],
+        "choice": "open",
+        "closure": null,
+        "decision_id": "dec_default",
+        "inputs": {
+          "opportunity_refs": [],
+          "selection_ref": null,
+          "signal_refs": [],
+          "target_ref": null
+        },
+        "justification": {
+          "evidence_refs": [],
+          "summary": "runtime graph planner selected this node"
+        },
+        "proposed_intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Local graph execution requested this node",
+          "purpose": "Open runtime node default",
+          "success_criteria": []
+        },
+        "selected_act_id": "act_default",
+        "selected_harness_ref": null
+      }
+    ],
+    "digest": "sha256:3a882d4ee2feb5157b2d04564fdd2f5a9b034f4343cd05f6fbdbf50257f3c77a",
+    "id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+    "idempotency": {
+      "content_hash": "sha256:run_default_0e5f4957b6ae-default-content",
+      "intent_key": "sha256:run_default_0e5f4957b6ae-default-intent",
+      "trigger_fingerprint": "sha256:run_default_0e5f4957b6ae-default-trigger"
+    },
+    "issuer": {
+      "kid": "dep-upgrade-plan-dogfood-2026-06-23-v3",
+      "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f",
+      "type": "hosted"
+    },
+    "lineage": {
+      "children": [],
+      "sync": []
+    },
+    "schema": "runx.receipt.v1",
+    "seal": {
+      "closed_at": "2026-06-23T05:27:55.230Z",
+      "criteria": [
+        {
+          "criterion_id": "process_exit",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "cli-tool exited successfully",
+          "verification_refs": []
+        }
+      ],
+      "disposition": "closed",
+      "last_observed_at": "2026-06-23T05:27:55.230Z",
+      "reason_code": "process_closed",
+      "summary": "cli-tool default completed"
+    },
+    "signals": [],
+    "signature": {
+      "alg": "Ed25519",
+      "value": "base64:UrtzsmdjU9h7LGjoAOPM9O6O_RwwmtaDi6I1iAna6YZa8Hy-pK9Sa8oa55ftYYHWLdc0-rvhTkx5Fjc5HelSCQ"
+    },
+    "subject": {
+      "commitments": [],
+      "kind": "skill",
+      "ref": {
+        "type": "harness",
+        "uri": "hrn_run_default_0e5f4957b6ae_default"
+      }
+    }
+  },
+  "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+  "registry_provenance": {
+    "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+    "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "ryde-play/dep-upgrade-plan",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "sha-7a1f34b0"
+  },
+  "run_id": "run_default_0e5f4957b6ae",
+  "schema": "runx.skill_run.v1",
+  "skill_name": "dep-upgrade-plan",
+  "status": "sealed"
+}

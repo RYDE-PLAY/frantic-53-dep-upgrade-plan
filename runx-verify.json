@@ -1,0 +1,25 @@
+{
+  "schema": "runx.verify_verdict.v1",
+  "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+  "valid": true,
+  "digest": {
+    "status": "valid",
+    "expected": "sha256:3a882d4ee2feb5157b2d04564fdd2f5a9b034f4343cd05f6fbdbf50257f3c77a",
+    "actual": "sha256:3a882d4ee2feb5157b2d04564fdd2f5a9b034f4343cd05f6fbdbf50257f3c77a"
+  },
+  "content_address": {
+    "status": "valid",
+    "expected": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+    "actual": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73"
+  },
+  "signature": {
+    "mode": "production",
+    "status": "valid",
+    "kid": "dep-upgrade-plan-dogfood-2026-06-23-v3"
+  },
+  "lineage": {
+    "status": "unverified",
+    "message": "single receipt verification cannot prove receipt-tree lineage"
+  },
+  "findings": []
+}

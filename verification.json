@@ -1,0 +1,98 @@
+{
+  "schema": "frantic.runx.dep-upgrade-plan.delivery.v1",
+  "bounty": 53,
+  "posting_id": "p-bed1634fbd",
+  "claim_id": "frantic:claim:94191856-17f5-4664-9e5c-d3e272cb7fd2",
+  "package": {
+    "skill_id": "ryde-play/dep-upgrade-plan",
+    "owner": "ryde-play",
+    "name": "dep-upgrade-plan",
+    "version": "sha-7a1f34b0",
+    "source_commit": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
+    "digest": "953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+    "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+    "trust_tier": "community"
+  },
+  "urls": {
+    "public_url": "https://runx.ai/x/ryde-play/dep-upgrade-plan",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan",
+    "pr_url": "https://github.com/runxhq/runx/pull/126",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/SKILL.md",
+    "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json",
+    "evidence_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/evidence.json",
+    "report": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/report.md",
+    "receipt_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json",
+    "dogfood_run_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-skill-run.json",
+    "runx_verify_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-verify.json",
+    "registry_read_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/registry-read.json",
+    "install_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/install.json"
+  },
+  "receipt_ref": "runx:receipt:sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+  "generated_at": "2026-06-23T05:29:52.256Z",
+  "verifier": {
+    "command_summary": [
+      "runx skill inspect ./skills/dep-upgrade-plan --json",
+      "runx harness ./skills/dep-upgrade-plan --receipt-dir <tmp> --json",
+      "node scripts/check-upstream-skill-bindings.mjs",
+      "runx registry publish ./skills/dep-upgrade-plan --registry https://api.runx.ai --version sha-7a1f34b0 --json",
+      "runx registry read ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+      "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --to <tmp> --json",
+      "runx skill ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --input-json ... --receipt-dir <tmp> --json",
+      "runx verify --receipt runx-receipt.json --json"
+    ],
+    "result": "pass",
+    "runx_version": "runx-cli 0.6.13",
+    "github_identity": "RYDE-PLAY / ryde-play verified locally before publish and PR work"
+  },
+  "assertions": [
+    {
+      "id": "package-name",
+      "status": "pass",
+      "evidence": "dep-upgrade-plan"
+    },
+    {
+      "id": "source-revision",
+      "status": "pass",
+      "evidence": "7a1f34b0c878988a46a4fadb493f9079a08a042e"
+    },
+    {
+      "id": "registry-read",
+      "status": "pass",
+      "evidence": "ryde-play/dep-upgrade-plan@sha-7a1f34b0"
+    },
+    {
+      "id": "registry-install",
+      "status": "pass",
+      "evidence": "ryde-play/dep-upgrade-plan"
+    },
+    {
+      "id": "dogfood-sealed",
+      "status": "pass",
+      "evidence": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73"
+    },
+    {
+      "id": "verify-valid",
+      "status": "pass",
+      "evidence": {
+        "signature": "valid",
+        "digest": "valid"
+      }
+    },
+    {
+      "id": "ranked-plan",
+      "status": "pass",
+      "evidence": [
+        "lodash:4.17.19->4.17.21",
+        "express:4.16.4->4.20.0"
+      ]
+    },
+    {
+      "id": "refusal-case",
+      "status": "pass",
+      "evidence": [
+        "debug:target 4.3.1 is explicitly blocked"
+      ]
+    }
+  ]
+}
