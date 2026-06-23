@@ -128,5 +128,154 @@
       "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
       "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
     ]
-  }
+  },
+  "dogfood": {
+    "receipt_ref": "runx:receipt:sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+    "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+    "status": "sealed",
+    "plan_length": 2,
+    "refused_length": 1,
+    "verify": {
+      "valid": true,
+      "signature_status": "valid",
+      "signature_mode": "production",
+      "digest_status": "valid",
+      "content_address_status": "valid",
+      "lineage_status": "unverified"
+    },
+    "run_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-skill-run.json",
+    "receipt_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json",
+    "verify_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-verify.json"
+  },
+  "observations": [
+    {
+      "id": "pr-head",
+      "status": "pass",
+      "summary": "PR #126 is open at the same source commit used for the published registry version.",
+      "evidence": "https://github.com/runxhq/runx/pull/126"
+    },
+    {
+      "id": "raw-skill-files",
+      "status": "pass",
+      "summary": "Raw X.yaml and SKILL.md are fetchable from the PR head commit.",
+      "evidence": [
+        "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/X.yaml",
+        "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/SKILL.md"
+      ]
+    },
+    {
+      "id": "local-harness",
+      "status": "pass",
+      "summary": "Local harness passed a sealed ranked-plan case and an all-upgrades-blocked refusal case.",
+      "evidence": {
+        "status": "passed",
+        "case_count": 2
+      }
+    },
+    {
+      "id": "registry-publish-read",
+      "status": "pass",
+      "summary": "Registry read returned the expected package id, owner, version, and digest.",
+      "evidence": {
+        "status": "success",
+        "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+        "source": "remote"
+      }
+    },
+    {
+      "id": "registry-install",
+      "status": "pass",
+      "summary": "runx add installed the exact remote registry package version.",
+      "evidence": {
+        "status": "installed",
+        "destination_suffix": "ryde-play/dep-upgrade-plan/sha-7a1f34b0/SKILL.md"
+      }
+    },
+    {
+      "id": "post-publish-dogfood",
+      "status": "pass",
+      "summary": "The registry skill produced a sealed post-publish dogfood receipt.",
+      "evidence": {
+        "receipt_ref": "runx:receipt:sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+        "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+        "status": "sealed",
+        "plan_length": 2,
+        "refused_length": 1,
+        "verify": {
+          "valid": true,
+          "signature_status": "valid",
+          "signature_mode": "production",
+          "digest_status": "valid",
+          "content_address_status": "valid",
+          "lineage_status": "unverified"
+        },
+        "run_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-skill-run.json",
+        "receipt_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json",
+        "verify_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-verify.json"
+      }
+    },
+    {
+      "id": "runx-verify",
+      "status": "pass",
+      "summary": "runx verify accepted the dogfood receipt with production signature, digest, and content address checks valid.",
+      "evidence": {
+        "valid": true,
+        "signature_status": "valid",
+        "signature_mode": "production",
+        "digest_status": "valid",
+        "content_address_status": "valid",
+        "lineage_status": "unverified"
+      }
+    },
+    {
+      "id": "upgrade-plan-output",
+      "status": "pass",
+      "summary": "Dogfood output includes ranked upgrades and an explicitly refused blocked candidate.",
+      "evidence": {
+        "schema": "dep.upgrade.plan.v1",
+        "summary": {
+          "advisory_records": 3,
+          "dependencies_in_lockfile": 3,
+          "planned_upgrades": 2,
+          "refused_candidates": 1
+        },
+        "plan": [
+          {
+            "advisory": "GHSA-35jh-r3h4-6jhm",
+            "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
+            "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
+            "constraint_note": "Patch-only update allowed in the current release train.",
+            "from": "4.17.19",
+            "pkg": "lodash",
+            "risk": "high",
+            "severity": "high",
+            "to": "4.17.21"
+          },
+          {
+            "advisory": "GHSA-qw6h-vgh9-j6wx",
+            "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
+            "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
+            "constraint_note": "Stay on Express 4 until the next application framework migration.",
+            "from": "4.16.4",
+            "pkg": "express",
+            "risk": "low",
+            "severity": "low",
+            "to": "4.20.0"
+          }
+        ],
+        "refused_candidates": [
+          {
+            "from": "2.6.8",
+            "package": "debug",
+            "reason": "target 4.3.1 is explicitly blocked",
+            "to": "4.3.1"
+          }
+        ],
+        "changelog": [
+          "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
+          "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+        ]
+      }
+    }
+  ]
 }
