@@ -4,7 +4,7 @@ Bounty #53 requested a published runx skill named `dep-upgrade-plan` that produc
 
 ## Artifact map
 
-- Registry listing: https://runx.ai/x/ryde-play/dep-upgrade-plan
+- Registry listing: https://runx.ai/x/ryde-play/dep-upgrade-plan@sha-7a1f34b0
 - Source: https://github.com/RYDE-PLAY/runx/tree/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan
 - PR: https://github.com/runxhq/runx/pull/126
 - Raw X.yaml: https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/X.yaml

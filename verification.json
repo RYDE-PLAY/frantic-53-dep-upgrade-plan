@@ -14,7 +14,7 @@
     "trust_tier": "community"
   },
   "urls": {
-    "public_url": "https://runx.ai/x/ryde-play/dep-upgrade-plan",
+    "public_url": "https://runx.ai/x/ryde-play/dep-upgrade-plan@sha-7a1f34b0",
     "source_url": "https://github.com/RYDE-PLAY/runx/tree/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan",
     "pr_url": "https://github.com/runxhq/runx/pull/126",
     "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/7a1f34b0c878988a46a4fadb493f9079a08a042e/skills/dep-upgrade-plan/X.yaml",
