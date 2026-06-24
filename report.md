@@ -5,10 +5,10 @@ Bounty #53 was returned because the original skill planned upgrades from hand-su
 ## Artifact map
 
 - Registry listing: https://runx.ai/x/ryde-play/dep-upgrade-plan@sha-38180cef1396
-- Source: https://github.com/RYDE-PLAY/runx/tree/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan
+- Source: https://github.com/RYDE-PLAY/runx/tree/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan
 - PR: https://github.com/runxhq/runx/pull/126
-- Raw X.yaml: https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/X.yaml
-- Raw SKILL.md: https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/SKILL.md
+- Raw X.yaml: https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan/X.yaml
+- Raw SKILL.md: https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan/SKILL.md
 - Evidence JSON: https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/evidence.json
 - Verification JSON: https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json
 - Dogfood receipt JSON: https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json

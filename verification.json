@@ -46,10 +46,10 @@
   ],
   "urls": {
     "registry": "https://runx.ai/x/ryde-play/dep-upgrade-plan@sha-38180cef1396",
-    "source": "https://github.com/RYDE-PLAY/runx/tree/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan",
+    "source": "https://github.com/RYDE-PLAY/runx/tree/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan",
     "pr": "https://github.com/runxhq/runx/pull/126",
-    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/X.yaml",
-    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/SKILL.md",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf0bbb5f4e165d088513e75f8c711f01ac/skills/dep-upgrade-plan/SKILL.md",
     "evidence_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/evidence.json",
     "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json",
     "report": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/report.md",
