@@ -3,41 +3,41 @@
   "registry": {
     "action": "install",
     "source": "remote",
-    "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+    "ref": "ryde-play/dep-upgrade-plan@sha-38180cef1396",
     "install": {
       "status": "installed",
-      "destination": "/tmp/frantic53-install-v2/ryde-play/dep-upgrade-plan/sha-7a1f34b0/SKILL.md",
+      "destination": "/tmp/frantic53-install/ryde-play/dep-upgrade-plan/sha-38180cef1396/SKILL.md",
       "skill_name": "dep-upgrade-plan",
       "source": "runx-registry",
       "source_label": "runx registry",
       "skill_id": "ryde-play/dep-upgrade-plan",
-      "version": "sha-7a1f34b0",
-      "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
-      "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
-      "profile_state_path": "/tmp/frantic53-install-v2/ryde-play/dep-upgrade-plan/sha-7a1f34b0/.runx/profile.json",
+      "version": "sha-38180cef1396",
+      "digest": "sha256:1db1afa46fa61726ca4d113eee3694431a8f6f5955fa11fc60d1e2855428d8c9",
+      "profile_digest": "sha256:39b3e0c3d7fd07f2c8221abfc71f3cd1d428b0e38cb201408c2d7118e071f0bb",
+      "profile_state_path": "/tmp/frantic53-install/ryde-play/dep-upgrade-plan/sha-38180cef1396/.runx/profile.json",
       "runner_names": [
         "default"
       ],
       "trust_tier": "community"
     },
     "receipt_metadata": {
-      "destination": "/tmp/frantic53-install-v2/ryde-play/dep-upgrade-plan/sha-7a1f34b0/SKILL.md",
-      "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
-      "install_count": 1,
-      "package_digest": "30ac134940583980e47bd6ab40fa65e06ccef9aeb866fa7cd5bdfa9e90172657",
-      "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+      "destination": "/tmp/frantic53-install/ryde-play/dep-upgrade-plan/sha-38180cef1396/SKILL.md",
+      "digest": "sha256:1db1afa46fa61726ca4d113eee3694431a8f6f5955fa11fc60d1e2855428d8c9",
+      "install_count": 3,
+      "package_digest": "0f478e3e8bb4cf46a4b2ca88af8e6839c8dcb81a3a3ecac559f7ce62d63434c2",
+      "profile_digest": "sha256:39b3e0c3d7fd07f2c8221abfc71f3cd1d428b0e38cb201408c2d7118e071f0bb",
       "publisher": {
         "display_name": "RYDE",
         "handle": "ryde-play",
         "id": "user_0e65bd23969ab1dea100a77c",
         "kind": "user"
       },
-      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "ref": "ryde-play/dep-upgrade-plan@sha-38180cef1396",
       "skill_id": "ryde-play/dep-upgrade-plan",
       "source_label": "runx registry",
       "status": "installed",
       "trust_tier": "community",
-      "version": "sha-7a1f34b0"
+      "version": "sha-38180cef1396"
     }
   }
 }

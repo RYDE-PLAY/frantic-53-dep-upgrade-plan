@@ -1,6 +1,6 @@
 {
   "closure": {
-    "closed_at": "2026-06-23T05:27:55.230Z",
+    "closed_at": "2026-06-24T01:13:58.358Z",
     "disposition": "closed",
     "reason_code": "process_closed",
     "summary": "cli-tool default completed"
@@ -11,70 +11,154 @@
       "dependency_upgrade_plan": {
         "artifacts": {},
         "changelog": [
-          "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
-          "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+          "underscore: 1.9.1 -> 1.13.8 (high); advisories=GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw; OSV fixed version stays within major 1; review release notes before shipping.",
+          "body-parser: 1.18.3 -> 1.20.3 (high); advisories=GHSA-qwcr-r2fm-qrc7; OSV fixed version stays within major 1; review release notes before shipping.",
+          "marked: 0.3.5 -> 4.0.10 (high); advisories=GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p; OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+          "mongodb: 2.2.36 -> 3.1.13 (high); advisories=GHSA-mh5c-679w-hh4r; OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+          "express: 4.16.4 -> 4.20.0 (medium); advisories=GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc; OSV fixed version stays within major 4; review release notes before shipping."
         ],
         "ok": true,
         "plan": [
           {
-            "advisory": "GHSA-35jh-r3h4-6jhm",
-            "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
-            "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
-            "constraint_note": "Patch-only update allowed in the current release train.",
-            "from": "4.17.19",
-            "pkg": "lodash",
+            "advisory": "GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw",
+            "advisory_ids": [
+              "GHSA-cf4h-3jhx-xvhq",
+              "GHSA-qpx9-hpmf-5gmw"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq, https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq",
+              "https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw"
+            ],
+            "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "1.9.1",
+            "pkg": "underscore",
             "risk": "high",
-            "severity": "high",
-            "to": "4.17.21"
+            "severity": "critical",
+            "to": "1.13.8"
           },
           {
-            "advisory": "GHSA-qw6h-vgh9-j6wx",
-            "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
-            "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
-            "constraint_note": "Stay on Express 4 until the next application framework migration.",
+            "advisory": "GHSA-qwcr-r2fm-qrc7",
+            "advisory_ids": [
+              "GHSA-qwcr-r2fm-qrc7"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7"
+            ],
+            "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "1.18.3",
+            "pkg": "body-parser",
+            "risk": "high",
+            "severity": "high",
+            "to": "1.20.3"
+          },
+          {
+            "advisory": "GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p",
+            "advisory_ids": [
+              "GHSA-5v2h-r2cx-5xgj",
+              "GHSA-7px7-7xjx-hxm8",
+              "GHSA-p9wx-2529-fp83",
+              "GHSA-rrrm-qjm4-v8hf",
+              "GHSA-vfvf-mqq8-rwqc",
+              "GHSA-x5pg-88wf-qq4p"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj, https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8, https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83, https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf, https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc, https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj",
+              "https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8",
+              "https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83",
+              "https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf",
+              "https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc",
+              "https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p"
+            ],
+            "breaking": "OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "0.3.5",
+            "pkg": "marked",
+            "risk": "high",
+            "severity": "high",
+            "to": "4.0.10"
+          },
+          {
+            "advisory": "GHSA-mh5c-679w-hh4r",
+            "advisory_ids": [
+              "GHSA-mh5c-679w-hh4r"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r"
+            ],
+            "breaking": "OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "2.2.36",
+            "pkg": "mongodb",
+            "risk": "high",
+            "severity": "high",
+            "to": "3.1.13"
+          },
+          {
+            "advisory": "GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc",
+            "advisory_ids": [
+              "GHSA-qw6h-vgh9-j6wx",
+              "GHSA-rv95-896h-c2vc"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx, https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx",
+              "https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc"
+            ],
+            "breaking": "OSV fixed version stays within major 4; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
             "from": "4.16.4",
             "pkg": "express",
-            "risk": "low",
-            "severity": "low",
+            "risk": "medium",
+            "severity": "moderate",
             "to": "4.20.0"
           }
         ],
         "refused": false,
         "refused_candidates": [
           {
-            "from": "2.6.8",
-            "package": "debug",
-            "reason": "target 4.3.1 is explicitly blocked",
-            "to": "4.3.1"
+            "advisory": "GHSA-2rq5-699j-x7p6",
+            "from": "1.4.2",
+            "package": "swig",
+            "reason": "OSV advisory has no fixed npm version"
           }
         ],
         "scanner": {
           "name": "dep-upgrade-plan",
-          "policy": "read-only release planning",
-          "version": "0.1.0"
+          "policy": "read-only release planning with live OSV advisory ingestion",
+          "version": "0.2.0"
         },
         "schema": "dep.upgrade.plan.v1",
         "source": {
-          "bytes": 536,
-          "kind": "inline-json",
-          "ref": "lockfile_json",
-          "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+          "bytes": 888024,
+          "kind": "url",
+          "ref": "https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json",
+          "sha256": "b9ed49893a9d3bcf6fe567cd38fe8168850591e0018f19d3bb0d1f80a4c2eecc"
         },
         "summary": {
-          "advisory_records": 3,
-          "dependencies_in_lockfile": 3,
-          "planned_upgrades": 2,
-          "refused_candidates": 1
+          "advisory_mode": "live_osv",
+          "advisory_records": 13,
+          "dependencies_in_lockfile": 16,
+          "live_osv_records": 13,
+          "planned_upgrades": 5,
+          "refused_candidates": 1,
+          "supplied_advisory_records": 0
         },
         "target": {
-          "name": "frantic53-fixture",
-          "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
-          "repo": "https://github.com/RYDE-PLAY/runx"
+          "name": "OWASP NodeGoat",
+          "ref": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+          "repo": "https://github.com/OWASP/NodeGoat"
         },
         "validation": {
           "constraints_enforced": true,
           "every_entry_has_breaking_note": true,
           "every_entry_has_exact_from_to": true,
+          "live_advisories_queried": true,
           "packages_installed": false,
           "target_code_executed": false
         }
@@ -83,75 +167,159 @@
       "report_md": null
     },
     "stderr": "",
-    "stdout": "{\n  \"dependency_upgrade_plan\": {\n    \"schema\": \"dep.upgrade.plan.v1\",\n    \"ok\": true,\n    \"refused\": false,\n    \"target\": {\n      \"name\": \"frantic53-fixture\",\n      \"repo\": \"https://github.com/RYDE-PLAY/runx\",\n      \"ref\": \"7a1f34b0c878988a46a4fadb493f9079a08a042e\"\n    },\n    \"source\": {\n      \"kind\": \"inline-json\",\n      \"ref\": \"lockfile_json\",\n      \"bytes\": 536,\n      \"sha256\": \"bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d\"\n    },\n    \"scanner\": {\n      \"name\": \"dep-upgrade-plan\",\n      \"version\": \"0.1.0\",\n      \"policy\": \"read-only release planning\"\n    },\n    \"summary\": {\n      \"dependencies_in_lockfile\": 3,\n      \"advisory_records\": 3,\n      \"planned_upgrades\": 2,\n      \"refused_candidates\": 1\n    },\n    \"plan\": [\n      {\n        \"pkg\": \"lodash\",\n        \"from\": \"4.17.19\",\n        \"to\": \"4.17.21\",\n        \"risk\": \"high\",\n        \"breaking\": \"Patch-level update; no breaking change indicated by supplied notes.\",\n        \"advisory\": \"GHSA-35jh-r3h4-6jhm\",\n        \"advisory_source\": \"https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm\",\n        \"severity\": \"high\",\n        \"constraint_note\": \"Patch-only update allowed in the current release train.\"\n      },\n      {\n        \"pkg\": \"express\",\n        \"from\": \"4.16.4\",\n        \"to\": \"4.20.0\",\n        \"risk\": \"low\",\n        \"breaking\": \"Stays on Express 4.x; review response.redirect behavior and middleware compatibility.\",\n        \"advisory\": \"GHSA-qw6h-vgh9-j6wx\",\n        \"advisory_source\": \"https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx\",\n        \"severity\": \"low\",\n        \"constraint_note\": \"Stay on Express 4 until the next application framework migration.\"\n      }\n    ],\n    \"changelog\": [\n      \"lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.\",\n      \"express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility.\"\n    ],\n    \"refused_candidates\": [\n      {\n        \"package\": \"debug\",\n        \"from\": \"2.6.8\",\n        \"to\": \"4.3.1\",\n        \"reason\": \"target 4.3.1 is explicitly blocked\"\n      }\n    ],\n    \"validation\": {\n      \"every_entry_has_exact_from_to\": true,\n      \"every_entry_has_breaking_note\": true,\n      \"constraints_enforced\": true,\n      \"target_code_executed\": false,\n      \"packages_installed\": false\n    },\n    \"artifacts\": {}\n  },\n  \"evidence_json\": null,\n  \"report_md\": null\n}\n",
+    "stdout": "{\n  \"dependency_upgrade_plan\": {\n    \"schema\": \"dep.upgrade.plan.v1\",\n    \"ok\": true,\n    \"refused\": false,\n    \"target\": {\n      \"name\": \"OWASP NodeGoat\",\n      \"repo\": \"https://github.com/OWASP/NodeGoat\",\n      \"ref\": \"c5cb68a7084e4ae7dcc60e6a98768720a81841e8\"\n    },\n    \"source\": {\n      \"kind\": \"url\",\n      \"ref\": \"https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json\",\n      \"bytes\": 888024,\n      \"sha256\": \"b9ed49893a9d3bcf6fe567cd38fe8168850591e0018f19d3bb0d1f80a4c2eecc\"\n    },\n    \"scanner\": {\n      \"name\": \"dep-upgrade-plan\",\n      \"version\": \"0.2.0\",\n      \"policy\": \"read-only release planning with live OSV advisory ingestion\"\n    },\n    \"summary\": {\n      \"dependencies_in_lockfile\": 16,\n      \"advisory_records\": 13,\n      \"live_osv_records\": 13,\n      \"advisory_mode\": \"live_osv\",\n      \"supplied_advisory_records\": 0,\n      \"planned_upgrades\": 5,\n      \"refused_candidates\": 1\n    },\n    \"plan\": [\n      {\n        \"pkg\": \"underscore\",\n        \"from\": \"1.9.1\",\n        \"to\": \"1.13.8\",\n        \"risk\": \"high\",\n        \"breaking\": \"OSV fixed version stays within major 1; review release notes before shipping.\",\n        \"advisory\": \"GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw\",\n        \"advisory_source\": \"https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq, https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw\",\n        \"severity\": \"critical\",\n        \"constraint_note\": \"No additional constraint note supplied.\",\n        \"advisory_ids\": [\n          \"GHSA-cf4h-3jhx-xvhq\",\n          \"GHSA-qpx9-hpmf-5gmw\"\n        ],\n        \"advisory_sources\": [\n          \"https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq\",\n          \"https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw\"\n        ]\n      },\n      {\n        \"pkg\": \"body-parser\",\n        \"from\": \"1.18.3\",\n        \"to\": \"1.20.3\",\n        \"risk\": \"high\",\n        \"breaking\": \"OSV fixed version stays within major 1; review release notes before shipping.\",\n        \"advisory\": \"GHSA-qwcr-r2fm-qrc7\",\n        \"advisory_source\": \"https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7\",\n        \"severity\": \"high\",\n        \"constraint_note\": \"No additional constraint note supplied.\",\n        \"advisory_ids\": [\n          \"GHSA-qwcr-r2fm-qrc7\"\n        ],\n        \"advisory_sources\": [\n          \"https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7\"\n        ]\n      },\n      {\n        \"pkg\": \"marked\",\n        \"from\": \"0.3.5\",\n        \"to\": \"4.0.10\",\n        \"risk\": \"high\",\n        \"breaking\": \"OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.\",\n        \"advisory\": \"GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p\",\n        \"advisory_source\": \"https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj, https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8, https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83, https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf, https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc, https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p\",\n        \"severity\": \"high\",\n        \"constraint_note\": \"No additional constraint note supplied.\",\n        \"advisory_ids\": [\n          \"GHSA-5v2h-r2cx-5xgj\",\n          \"GHSA-7px7-7xjx-hxm8\",\n          \"GHSA-p9wx-2529-fp83\",\n          \"GHSA-rrrm-qjm4-v8hf\",\n          \"GHSA-vfvf-mqq8-rwqc\",\n          \"GHSA-x5pg-88wf-qq4p\"\n        ],\n        \"advisory_sources\": [\n          \"https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj\",\n          \"https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8\",\n          \"https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83\",\n          \"https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf\",\n          \"https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc\",\n          \"https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p\"\n        ]\n      },\n      {\n        \"pkg\": \"mongodb\",\n        \"from\": \"2.2.36\",\n        \"to\": \"3.1.13\",\n        \"risk\": \"high\",\n        \"breaking\": \"OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.\",\n        \"advisory\": \"GHSA-mh5c-679w-hh4r\",\n        \"advisory_source\": \"https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r\",\n        \"severity\": \"high\",\n        \"constraint_note\": \"No additional constraint note supplied.\",\n        \"advisory_ids\": [\n          \"GHSA-mh5c-679w-hh4r\"\n        ],\n        \"advisory_sources\": [\n          \"https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r\"\n        ]\n      },\n      {\n        \"pkg\": \"express\",\n        \"from\": \"4.16.4\",\n        \"to\": \"4.20.0\",\n        \"risk\": \"medium\",\n        \"breaking\": \"OSV fixed version stays within major 4; review release notes before shipping.\",\n        \"advisory\": \"GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc\",\n        \"advisory_source\": \"https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx, https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc\",\n        \"severity\": \"moderate\",\n        \"constraint_note\": \"No additional constraint note supplied.\",\n        \"advisory_ids\": [\n          \"GHSA-qw6h-vgh9-j6wx\",\n          \"GHSA-rv95-896h-c2vc\"\n        ],\n        \"advisory_sources\": [\n          \"https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx\",\n          \"https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc\"\n        ]\n      }\n    ],\n    \"changelog\": [\n      \"underscore: 1.9.1 -> 1.13.8 (high); advisories=GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw; OSV fixed version stays within major 1; review release notes before shipping.\",\n      \"body-parser: 1.18.3 -> 1.20.3 (high); advisories=GHSA-qwcr-r2fm-qrc7; OSV fixed version stays within major 1; review release notes before shipping.\",\n      \"marked: 0.3.5 -> 4.0.10 (high); advisories=GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p; OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.\",\n      \"mongodb: 2.2.36 -> 3.1.13 (high); advisories=GHSA-mh5c-679w-hh4r; OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.\",\n      \"express: 4.16.4 -> 4.20.0 (medium); advisories=GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc; OSV fixed version stays within major 4; review release notes before shipping.\"\n    ],\n    \"refused_candidates\": [\n      {\n        \"package\": \"swig\",\n        \"from\": \"1.4.2\",\n        \"advisory\": \"GHSA-2rq5-699j-x7p6\",\n        \"reason\": \"OSV advisory has no fixed npm version\"\n      }\n    ],\n    \"validation\": {\n      \"every_entry_has_exact_from_to\": true,\n      \"every_entry_has_breaking_note\": true,\n      \"constraints_enforced\": true,\n      \"live_advisories_queried\": true,\n      \"target_code_executed\": false,\n      \"packages_installed\": false\n    },\n    \"artifacts\": {}\n  },\n  \"evidence_json\": null,\n  \"report_md\": null\n}\n",
     "structured_output": {
       "dependency_upgrade_plan": {
         "artifacts": {},
         "changelog": [
-          "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
-          "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+          "underscore: 1.9.1 -> 1.13.8 (high); advisories=GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw; OSV fixed version stays within major 1; review release notes before shipping.",
+          "body-parser: 1.18.3 -> 1.20.3 (high); advisories=GHSA-qwcr-r2fm-qrc7; OSV fixed version stays within major 1; review release notes before shipping.",
+          "marked: 0.3.5 -> 4.0.10 (high); advisories=GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p; OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+          "mongodb: 2.2.36 -> 3.1.13 (high); advisories=GHSA-mh5c-679w-hh4r; OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+          "express: 4.16.4 -> 4.20.0 (medium); advisories=GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc; OSV fixed version stays within major 4; review release notes before shipping."
         ],
         "ok": true,
         "plan": [
           {
-            "advisory": "GHSA-35jh-r3h4-6jhm",
-            "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
-            "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
-            "constraint_note": "Patch-only update allowed in the current release train.",
-            "from": "4.17.19",
-            "pkg": "lodash",
+            "advisory": "GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw",
+            "advisory_ids": [
+              "GHSA-cf4h-3jhx-xvhq",
+              "GHSA-qpx9-hpmf-5gmw"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq, https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq",
+              "https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw"
+            ],
+            "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "1.9.1",
+            "pkg": "underscore",
             "risk": "high",
-            "severity": "high",
-            "to": "4.17.21"
+            "severity": "critical",
+            "to": "1.13.8"
           },
           {
-            "advisory": "GHSA-qw6h-vgh9-j6wx",
-            "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
-            "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
-            "constraint_note": "Stay on Express 4 until the next application framework migration.",
+            "advisory": "GHSA-qwcr-r2fm-qrc7",
+            "advisory_ids": [
+              "GHSA-qwcr-r2fm-qrc7"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7"
+            ],
+            "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "1.18.3",
+            "pkg": "body-parser",
+            "risk": "high",
+            "severity": "high",
+            "to": "1.20.3"
+          },
+          {
+            "advisory": "GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p",
+            "advisory_ids": [
+              "GHSA-5v2h-r2cx-5xgj",
+              "GHSA-7px7-7xjx-hxm8",
+              "GHSA-p9wx-2529-fp83",
+              "GHSA-rrrm-qjm4-v8hf",
+              "GHSA-vfvf-mqq8-rwqc",
+              "GHSA-x5pg-88wf-qq4p"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj, https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8, https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83, https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf, https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc, https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj",
+              "https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8",
+              "https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83",
+              "https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf",
+              "https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc",
+              "https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p"
+            ],
+            "breaking": "OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "0.3.5",
+            "pkg": "marked",
+            "risk": "high",
+            "severity": "high",
+            "to": "4.0.10"
+          },
+          {
+            "advisory": "GHSA-mh5c-679w-hh4r",
+            "advisory_ids": [
+              "GHSA-mh5c-679w-hh4r"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r"
+            ],
+            "breaking": "OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+            "constraint_note": "No additional constraint note supplied.",
+            "from": "2.2.36",
+            "pkg": "mongodb",
+            "risk": "high",
+            "severity": "high",
+            "to": "3.1.13"
+          },
+          {
+            "advisory": "GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc",
+            "advisory_ids": [
+              "GHSA-qw6h-vgh9-j6wx",
+              "GHSA-rv95-896h-c2vc"
+            ],
+            "advisory_source": "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx, https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc",
+            "advisory_sources": [
+              "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx",
+              "https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc"
+            ],
+            "breaking": "OSV fixed version stays within major 4; review release notes before shipping.",
+            "constraint_note": "No additional constraint note supplied.",
             "from": "4.16.4",
             "pkg": "express",
-            "risk": "low",
-            "severity": "low",
+            "risk": "medium",
+            "severity": "moderate",
             "to": "4.20.0"
           }
         ],
         "refused": false,
         "refused_candidates": [
           {
-            "from": "2.6.8",
-            "package": "debug",
-            "reason": "target 4.3.1 is explicitly blocked",
-            "to": "4.3.1"
+            "advisory": "GHSA-2rq5-699j-x7p6",
+            "from": "1.4.2",
+            "package": "swig",
+            "reason": "OSV advisory has no fixed npm version"
           }
         ],
         "scanner": {
           "name": "dep-upgrade-plan",
-          "policy": "read-only release planning",
-          "version": "0.1.0"
+          "policy": "read-only release planning with live OSV advisory ingestion",
+          "version": "0.2.0"
         },
         "schema": "dep.upgrade.plan.v1",
         "source": {
-          "bytes": 536,
-          "kind": "inline-json",
-          "ref": "lockfile_json",
-          "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+          "bytes": 888024,
+          "kind": "url",
+          "ref": "https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json",
+          "sha256": "b9ed49893a9d3bcf6fe567cd38fe8168850591e0018f19d3bb0d1f80a4c2eecc"
         },
         "summary": {
-          "advisory_records": 3,
-          "dependencies_in_lockfile": 3,
-          "planned_upgrades": 2,
-          "refused_candidates": 1
+          "advisory_mode": "live_osv",
+          "advisory_records": 13,
+          "dependencies_in_lockfile": 16,
+          "live_osv_records": 13,
+          "planned_upgrades": 5,
+          "refused_candidates": 1,
+          "supplied_advisory_records": 0
         },
         "target": {
-          "name": "frantic53-fixture",
-          "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
-          "repo": "https://github.com/RYDE-PLAY/runx"
+          "name": "OWASP NodeGoat",
+          "ref": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+          "repo": "https://github.com/OWASP/NodeGoat"
         },
         "validation": {
           "constraints_enforced": true,
           "every_entry_has_breaking_note": true,
           "every_entry_has_exact_from_to": true,
+          "live_advisories_queried": true,
           "packages_installed": false,
           "target_code_executed": false
         }
@@ -164,70 +332,154 @@
     "dependency_upgrade_plan": {
       "artifacts": {},
       "changelog": [
-        "lodash: 4.17.19 -> 4.17.21 (high); Patch-level update; no breaking change indicated by supplied notes.",
-        "express: 4.16.4 -> 4.20.0 (low); Stays on Express 4.x; review response.redirect behavior and middleware compatibility."
+        "underscore: 1.9.1 -> 1.13.8 (high); advisories=GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw; OSV fixed version stays within major 1; review release notes before shipping.",
+        "body-parser: 1.18.3 -> 1.20.3 (high); advisories=GHSA-qwcr-r2fm-qrc7; OSV fixed version stays within major 1; review release notes before shipping.",
+        "marked: 0.3.5 -> 4.0.10 (high); advisories=GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p; OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+        "mongodb: 2.2.36 -> 3.1.13 (high); advisories=GHSA-mh5c-679w-hh4r; OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+        "express: 4.16.4 -> 4.20.0 (medium); advisories=GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc; OSV fixed version stays within major 4; review release notes before shipping."
       ],
       "ok": true,
       "plan": [
         {
-          "advisory": "GHSA-35jh-r3h4-6jhm",
-          "advisory_source": "https://github.com/lodash/lodash/security/advisories/GHSA-35jh-r3h4-6jhm",
-          "breaking": "Patch-level update; no breaking change indicated by supplied notes.",
-          "constraint_note": "Patch-only update allowed in the current release train.",
-          "from": "4.17.19",
-          "pkg": "lodash",
+          "advisory": "GHSA-cf4h-3jhx-xvhq, GHSA-qpx9-hpmf-5gmw",
+          "advisory_ids": [
+            "GHSA-cf4h-3jhx-xvhq",
+            "GHSA-qpx9-hpmf-5gmw"
+          ],
+          "advisory_source": "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq, https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw",
+          "advisory_sources": [
+            "https://osv.dev/vulnerability/GHSA-cf4h-3jhx-xvhq",
+            "https://osv.dev/vulnerability/GHSA-qpx9-hpmf-5gmw"
+          ],
+          "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+          "constraint_note": "No additional constraint note supplied.",
+          "from": "1.9.1",
+          "pkg": "underscore",
           "risk": "high",
-          "severity": "high",
-          "to": "4.17.21"
+          "severity": "critical",
+          "to": "1.13.8"
         },
         {
-          "advisory": "GHSA-qw6h-vgh9-j6wx",
-          "advisory_source": "https://github.com/expressjs/express/security/advisories/GHSA-qw6h-vgh9-j6wx",
-          "breaking": "Stays on Express 4.x; review response.redirect behavior and middleware compatibility.",
-          "constraint_note": "Stay on Express 4 until the next application framework migration.",
+          "advisory": "GHSA-qwcr-r2fm-qrc7",
+          "advisory_ids": [
+            "GHSA-qwcr-r2fm-qrc7"
+          ],
+          "advisory_source": "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7",
+          "advisory_sources": [
+            "https://osv.dev/vulnerability/GHSA-qwcr-r2fm-qrc7"
+          ],
+          "breaking": "OSV fixed version stays within major 1; review release notes before shipping.",
+          "constraint_note": "No additional constraint note supplied.",
+          "from": "1.18.3",
+          "pkg": "body-parser",
+          "risk": "high",
+          "severity": "high",
+          "to": "1.20.3"
+        },
+        {
+          "advisory": "GHSA-5v2h-r2cx-5xgj, GHSA-7px7-7xjx-hxm8, GHSA-p9wx-2529-fp83, GHSA-rrrm-qjm4-v8hf, GHSA-vfvf-mqq8-rwqc, GHSA-x5pg-88wf-qq4p",
+          "advisory_ids": [
+            "GHSA-5v2h-r2cx-5xgj",
+            "GHSA-7px7-7xjx-hxm8",
+            "GHSA-p9wx-2529-fp83",
+            "GHSA-rrrm-qjm4-v8hf",
+            "GHSA-vfvf-mqq8-rwqc",
+            "GHSA-x5pg-88wf-qq4p"
+          ],
+          "advisory_source": "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj, https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8, https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83, https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf, https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc, https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p",
+          "advisory_sources": [
+            "https://osv.dev/vulnerability/GHSA-5v2h-r2cx-5xgj",
+            "https://osv.dev/vulnerability/GHSA-7px7-7xjx-hxm8",
+            "https://osv.dev/vulnerability/GHSA-p9wx-2529-fp83",
+            "https://osv.dev/vulnerability/GHSA-rrrm-qjm4-v8hf",
+            "https://osv.dev/vulnerability/GHSA-vfvf-mqq8-rwqc",
+            "https://osv.dev/vulnerability/GHSA-x5pg-88wf-qq4p"
+          ],
+          "breaking": "OSV fixed version crosses major versions (0.3.5 -> 4.0.10); review package changelog and runtime compatibility.",
+          "constraint_note": "No additional constraint note supplied.",
+          "from": "0.3.5",
+          "pkg": "marked",
+          "risk": "high",
+          "severity": "high",
+          "to": "4.0.10"
+        },
+        {
+          "advisory": "GHSA-mh5c-679w-hh4r",
+          "advisory_ids": [
+            "GHSA-mh5c-679w-hh4r"
+          ],
+          "advisory_source": "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r",
+          "advisory_sources": [
+            "https://osv.dev/vulnerability/GHSA-mh5c-679w-hh4r"
+          ],
+          "breaking": "OSV fixed version crosses major versions (2.2.36 -> 3.1.13); review package changelog and runtime compatibility.",
+          "constraint_note": "No additional constraint note supplied.",
+          "from": "2.2.36",
+          "pkg": "mongodb",
+          "risk": "high",
+          "severity": "high",
+          "to": "3.1.13"
+        },
+        {
+          "advisory": "GHSA-qw6h-vgh9-j6wx, GHSA-rv95-896h-c2vc",
+          "advisory_ids": [
+            "GHSA-qw6h-vgh9-j6wx",
+            "GHSA-rv95-896h-c2vc"
+          ],
+          "advisory_source": "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx, https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc",
+          "advisory_sources": [
+            "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx",
+            "https://osv.dev/vulnerability/GHSA-rv95-896h-c2vc"
+          ],
+          "breaking": "OSV fixed version stays within major 4; review release notes before shipping.",
+          "constraint_note": "No additional constraint note supplied.",
           "from": "4.16.4",
           "pkg": "express",
-          "risk": "low",
-          "severity": "low",
+          "risk": "medium",
+          "severity": "moderate",
           "to": "4.20.0"
         }
       ],
       "refused": false,
       "refused_candidates": [
         {
-          "from": "2.6.8",
-          "package": "debug",
-          "reason": "target 4.3.1 is explicitly blocked",
-          "to": "4.3.1"
+          "advisory": "GHSA-2rq5-699j-x7p6",
+          "from": "1.4.2",
+          "package": "swig",
+          "reason": "OSV advisory has no fixed npm version"
         }
       ],
       "scanner": {
         "name": "dep-upgrade-plan",
-        "policy": "read-only release planning",
-        "version": "0.1.0"
+        "policy": "read-only release planning with live OSV advisory ingestion",
+        "version": "0.2.0"
       },
       "schema": "dep.upgrade.plan.v1",
       "source": {
-        "bytes": 536,
-        "kind": "inline-json",
-        "ref": "lockfile_json",
-        "sha256": "bebfa20a5775bdd4249bb7de41e92657d8582cfb45c5af4c1d1a9ecf63a9e08d"
+        "bytes": 888024,
+        "kind": "url",
+        "ref": "https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json",
+        "sha256": "b9ed49893a9d3bcf6fe567cd38fe8168850591e0018f19d3bb0d1f80a4c2eecc"
       },
       "summary": {
-        "advisory_records": 3,
-        "dependencies_in_lockfile": 3,
-        "planned_upgrades": 2,
-        "refused_candidates": 1
+        "advisory_mode": "live_osv",
+        "advisory_records": 13,
+        "dependencies_in_lockfile": 16,
+        "live_osv_records": 13,
+        "planned_upgrades": 5,
+        "refused_candidates": 1,
+        "supplied_advisory_records": 0
       },
       "target": {
-        "name": "frantic53-fixture",
-        "ref": "7a1f34b0c878988a46a4fadb493f9079a08a042e",
-        "repo": "https://github.com/RYDE-PLAY/runx"
+        "name": "OWASP NodeGoat",
+        "ref": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+        "repo": "https://github.com/OWASP/NodeGoat"
       },
       "validation": {
         "constraints_enforced": true,
         "every_entry_has_breaking_note": true,
         "every_entry_has_exact_from_to": true,
+        "live_advisories_queried": true,
         "packages_installed": false,
         "target_code_executed": false
       }
@@ -240,7 +492,7 @@
       {
         "artifact_refs": [],
         "closure": {
-          "closed_at": "2026-06-23T05:27:55.230Z",
+          "closed_at": "2026-06-24T01:13:58.358Z",
           "disposition": "closed",
           "reason_code": "process_exit",
           "summary": "cli-tool exited successfully"
@@ -295,7 +547,7 @@
       "terms": []
     },
     "canonicalization": "runx.receipt.c14n.v1",
-    "created_at": "2026-06-23T05:27:55.230Z",
+    "created_at": "2026-06-24T01:13:58.358Z",
     "decisions": [
       {
         "artifact_refs": [],
@@ -323,16 +575,16 @@
         "selected_harness_ref": null
       }
     ],
-    "digest": "sha256:3a882d4ee2feb5157b2d04564fdd2f5a9b034f4343cd05f6fbdbf50257f3c77a",
-    "id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+    "digest": "sha256:d93185bb366a63a76ba1310a2bceccd4d826cb9f8d434c9457bd41dbd5926e1e",
+    "id": "sha256:4502f657b82c943d0aa3b1a3094e2c52891c0579ac1c852aaa3fa56d7aafafce",
     "idempotency": {
-      "content_hash": "sha256:run_default_0e5f4957b6ae-default-content",
-      "intent_key": "sha256:run_default_0e5f4957b6ae-default-intent",
-      "trigger_fingerprint": "sha256:run_default_0e5f4957b6ae-default-trigger"
+      "content_hash": "sha256:run_default_a36fd089c6f1-default-content",
+      "intent_key": "sha256:run_default_a36fd089c6f1-default-intent",
+      "trigger_fingerprint": "sha256:run_default_a36fd089c6f1-default-trigger"
     },
     "issuer": {
-      "kid": "dep-upgrade-plan-dogfood-2026-06-23-v3",
-      "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f",
+      "kid": "dep-upgrade-plan-post-publish-20260624",
+      "public_key_sha256": "sha256:767e86227035dedbc04fc6b8394c8729d5afa97c58ae20b26861cb575ccb34ed",
       "type": "hosted"
     },
     "lineage": {
@@ -341,7 +593,7 @@
     },
     "schema": "runx.receipt.v1",
     "seal": {
-      "closed_at": "2026-06-23T05:27:55.230Z",
+      "closed_at": "2026-06-24T01:13:58.358Z",
       "criteria": [
         {
           "criterion_id": "process_exit",
@@ -352,37 +604,37 @@
         }
       ],
       "disposition": "closed",
-      "last_observed_at": "2026-06-23T05:27:55.230Z",
+      "last_observed_at": "2026-06-24T01:13:58.358Z",
       "reason_code": "process_closed",
       "summary": "cli-tool default completed"
     },
     "signals": [],
     "signature": {
       "alg": "Ed25519",
-      "value": "base64:UrtzsmdjU9h7LGjoAOPM9O6O_RwwmtaDi6I1iAna6YZa8Hy-pK9Sa8oa55ftYYHWLdc0-rvhTkx5Fjc5HelSCQ"
+      "value": "base64:0Sr7a2nDih6ovJ-W3erynaRkp1oCD_yK-OueATddrNOR1I_EmYQBPbqvMNR-LhR2UEZm2z19LK4NTicWuIg8CA"
     },
     "subject": {
       "commitments": [],
       "kind": "skill",
       "ref": {
         "type": "harness",
-        "uri": "hrn_run_default_0e5f4957b6ae_default"
+        "uri": "hrn_run_default_a36fd089c6f1_default"
       }
     }
   },
-  "receipt_id": "sha256:f11a5df5a43144c288215d512db078cf69d3bb6c1c349e8412e4cc99c9194e73",
+  "receipt_id": "sha256:4502f657b82c943d0aa3b1a3094e2c52891c0579ac1c852aaa3fa56d7aafafce",
   "registry_provenance": {
-    "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
-    "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+    "digest": "sha256:1db1afa46fa61726ca4d113eee3694431a8f6f5955fa11fc60d1e2855428d8c9",
+    "profile_digest": "sha256:39b3e0c3d7fd07f2c8221abfc71f3cd1d428b0e38cb201408c2d7118e071f0bb",
     "registry_key_id": "runx-registry-ed25519-v1",
     "registry_source": "remote https://api.runx.ai",
     "registry_source_fingerprint": "ba1ac16b631195fd",
     "skill_id": "ryde-play/dep-upgrade-plan",
     "trust_state": "trusted",
     "trust_tier": "community",
-    "version": "sha-7a1f34b0"
+    "version": "sha-38180cef1396"
   },
-  "run_id": "run_default_0e5f4957b6ae",
+  "run_id": "run_default_a36fd089c6f1",
   "schema": "runx.skill_run.v1",
   "skill_name": "dep-upgrade-plan",
   "status": "sealed"
