@@ -14,9 +14,9 @@
     "trust_tier": "community"
   },
   "implementation": {
-    "commit": "d316216c5f4f4af9a50722d0e4378f6b495e8403",
+    "commit": "fe0a77cf7603ca5395f326b8c0958f1f7a08ead4",
     "pr": "https://github.com/runxhq/runx/pull/126",
-    "source_tree": "https://github.com/RYDE-PLAY/runx/tree/d316216c5f4f4af9a50722d0e4378f6b495e8403/skills/dep-upgrade-plan",
+    "source_tree": "https://github.com/RYDE-PLAY/runx/tree/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan",
     "change_summary": [
       "Default execution now extracts locked npm dependencies from package-lock v2/v3 and queries OSV.dev /v1/query for exact package/version advisories.",
       "Plans are aggregated to one upgrade target per package while preserving all advisory ids and sources.",
@@ -232,10 +232,10 @@
   "receipt_ref": "runx:receipt:sha256:4502f657b82c943d0aa3b1a3094e2c52891c0579ac1c852aaa3fa56d7aafafce",
   "urls": {
     "registry": "https://runx.ai/x/ryde-play/dep-upgrade-plan@sha-38180cef1396",
-    "source": "https://github.com/RYDE-PLAY/runx/tree/d316216c5f4f4af9a50722d0e4378f6b495e8403/skills/dep-upgrade-plan",
+    "source": "https://github.com/RYDE-PLAY/runx/tree/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan",
     "pr": "https://github.com/runxhq/runx/pull/126",
-    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/d316216c5f4f4af9a50722d0e4378f6b495e8403/skills/dep-upgrade-plan/X.yaml",
-    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/d316216c5f4f4af9a50722d0e4378f6b495e8403/skills/dep-upgrade-plan/SKILL.md",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/fe0a77cf7603ca5395f326b8c0958f1f7a08ead4/skills/dep-upgrade-plan/SKILL.md",
     "evidence_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/evidence.json",
     "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json",
     "report": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/report.md",
