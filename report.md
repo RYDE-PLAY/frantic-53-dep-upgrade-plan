@@ -28,6 +28,7 @@ Bounty #53 was returned because the original skill planned upgrades from hand-su
 - Local harness: passed sealed and all-upgrades-blocked refusal cases.
 - Upstream skill binding check: passed.
 - Registry publish: published `ryde-play/dep-upgrade-plan@sha-38180cef1396`.
+- runx CLI version: `runx-cli 0.6.13`.
 - Registry read/install: passed from `https://api.runx.ai`.
 - Post-publish dogfood: live OSV mode found 13 advisory records across 16 direct production dependencies and produced 5 package upgrades.
 - `runx verify`: valid production signature for receipt `sha256:4502f657b82c943d0aa3b1a3094e2c52891c0579ac1c852aaa3fa56d7aafafce`.

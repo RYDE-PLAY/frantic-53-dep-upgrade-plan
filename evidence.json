@@ -227,6 +227,12 @@
           "kid": "dep-upgrade-plan-post-publish-20260624"
         }
       }
+    },
+    {
+      "id": "runx-cli-version",
+      "status": "pass",
+      "summary": "All runx commands for this repair used the current publish/runtime CLI.",
+      "evidence": "runx-cli 0.6.13"
     }
   ],
   "receipt_ref": "runx:receipt:sha256:4502f657b82c943d0aa3b1a3094e2c52891c0579ac1c852aaa3fa56d7aafafce",
@@ -240,5 +246,6 @@
     "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/verification.json",
     "report": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/report.md",
     "receipt_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-53-dep-upgrade-plan/main/runx-receipt.json"
-  }
+  },
+  "runx_cli_version": "runx-cli 0.6.13"
 }
